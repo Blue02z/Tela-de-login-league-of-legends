@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-family: poppins;
+    }
+
+    body{
+        background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4e9766b5-69ce-4708-a4ce-675d836da055/dg0ytjv-5d4e69d5-25ad-460d-82f6-8b0a5c818407.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRlOTc2NmI1LTY5Y2UtNDcwOC1hNGNlLTY3NWQ4MzZkYTA1NVwvZGcweXRqdi01ZDRlNjlkNS0yNWFkLTQ2MGQtODJmNi04YjBhNWM4MTg0MDcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xWLUPC-oZ_92buAsOVfUshZLhKuSe07De4IK5smNsLg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    h1{
+        color: #575757;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: "Poppins";
+        font-size: 55px;
+        font-weight: bold;
+        line-height: normal;
+        margin-bottom: 10px;
+
+    }
+
+
+    .itens{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .bah{
+        background-color: white;
+        height: 100vh;
+        width: 445px;
+        float: right;
+    }
+    
+
+
+    .inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #btn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    #nome{
+        width: 375px;
+        height: 64px;
+        border-radius: 26px;
+        background: rgba(214, 214, 214, 0.70);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #senha{
+        width: 375px;
+        height: 64px;
+        border-radius: 26px;
+        background: rgba(214, 214, 214, 0.70);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .outer_logins{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+
+
+    input:nth-child(1){
+        margin-bottom: 20px;
+        color: #575757;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    input:nth-child(2){
+        margin-bottom: 10px;
+        color: #575757;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    input::placeholder{
+        padding-left: 30px;
+    }
+
+
+
+    input:focus::placeholder{
+        color: transparent;
+        text-shadow: none;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+    }
+
+    input:focus{
+        transform: scale(1.05);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    button{
+        width: 173px;
+        height: 50px;
+        border-radius: 26px;
+        background: rgba(6, 25, 92, 0.80);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    button h2{
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    button:hover{
+        cursor: pointer;
+        background: rgba(2, 12, 49, 0.8);
+        transition: cubic-bezier(0.215, 0.610, 0.355, 1) 1s;
+    }
+
+
+    #save{
+        display: flex;
+        justify-content: start;
+            color: #575757;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-left: 10px;
+    }
+
+    a:hover{
+        color: #00028f;
+        text-decoration: underline;
+    }
+
+    #save input{
+        width: 21px;
+        height: 21px;
+        border-radius: 6px;
+        background: rgba(214, 214, 214, 0.70);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-right: 10px;
+    }
+
+    #google{
+        background: #F0F0F0;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    #microsoft{
+        background: #F0F0F0;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    #facebook{
+        background: #1977F3;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+
+    #google:hover{
+        cursor: pointer;
+        background: #d6d6d6;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        transform: scale(1.2);
+    }
+
+    #microsoft:hover{
+        cursor: pointer;
+        background: #d6d6d6;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        transform: scale(1.2);
+    }
+
+    #facebook:hover{
+        cursor: pointer;
+        background: #0858c0;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        transform: scale(1.2);
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    #logo{
+        padding-top: 10px;
+    }
+
+    
+
+/*responsividade para celulares */
+
+@media (max-width:700px) {
+
+    #logo{
+        padding-top: 30px;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .itens{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+
+    }
+
+ 
+
+    .bah{
+
+        height: 86vh;
+        width: 445px;
+        float: none;
+        border-radius: 8px;
+    }
+
+    .outer_logins{
+        display: none;
+    }
+
+    #nome{
+        width: 375px;
+        height: 54px;
+        border-radius: 26px;
+        background: rgba(214, 214, 214, 0.70);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #senha{
+        width: 375px;
+        height: 54px;
+        border-radius: 26px;
+        background: rgba(214, 214, 214, 0.70);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+}
+
+
+</style>
+<body>
+    <div class="bah">
+        <div class="itens">
+            <div class="container">
+                <img src="https://logodownload.org/wp-content/uploads/2014/09/lol-league-of-Legends-logo.png" alt="" width="298px" height="126px" id="logo">
+                <h1>Login</h1>
+                <div class="inputs">
+                    <input type="text" id="nome" placeholder="Insira seu nome ou e-mail">
+                    <input type="password" id="senha" placeholder="Insira sua senha">
+                    <div id="save">
+                        <input type="checkbox" name="" id="" >
+                        <h3>Salvar login</h3>
+                    </div>
+                    <div id="btn">
+                        <button type="submit"><h2>Login</h2></button>
+                    </div>
+                    <h3><a href="#">Esqueci a senha</a></h3>
+                </div>
+                <div class="outer_logins">
+                    <div id="google">
+                        <img src="https://img.freepik.com/icones-gratis/procurar_318-265146.jpg" alt="" width="50px" height="50px">
+                    </div>
+                    <div id="microsoft">
+                        <img src="https://img.freepik.com/icones-gratis/microsoft_318-566086.jpg?w=360" alt="" width="50px" height="50px">
+                    </div>
+                    <div id="facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png" alt="" width="50px" height="50px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
